@@ -1,4 +1,5 @@
 """Test the `met` module."""
+import pytest
 
 from hugs.calc import get_wind_dir, get_wind_speed, get_wind_components
 
@@ -54,3 +55,9 @@ def test_components_array_like():
     (x_components, y_components) = get_wind_components(speed, wdir)
     assert_array_almost_equal([0, 0], x_components, 4)
     assert_array_almost_equal([-4, 8], y_components, 4)
+
+
+def test_warning_for_wind_dir():
+    """Test warning raised when wdir > 360."""
+    with pytest.warns(UserWarning):
+        get_wind_components(10, 540)
