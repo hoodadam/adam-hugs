@@ -1,6 +1,6 @@
 """Test the `met` module."""
 
-from hugs.calc import get_wind_dir, get_wind_speed
+from hugs.calc import get_wind_dir, get_wind_speed, get_wind_components
 
 import numpy as np
 from numpy.testing import assert_almost_equal, assert_array_almost_equal
@@ -35,3 +35,12 @@ def test_dir():
     true_dir = np.array([270., 225., 180., 270.])
 
     assert_array_almost_equal(true_dir, direc, 4)
+
+
+def test_components():
+    """Test calculating wind components."""
+    components = get_wind_components(10, 60)
+
+    expected = [-8.66, -5.00]
+
+    assert_array_almost_equal(expected, components, 3)

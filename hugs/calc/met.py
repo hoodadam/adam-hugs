@@ -70,7 +70,7 @@ def get_wind_components(speed, wdir):
     speed : array_like
         The wind speed (magnitude)
     wdir : array_like
-        The wind direction, specified as the direction from which the wind is
+        The wind direction, in degrees, specified as the direction from which the wind is
         blowing, with 0 being North.
 
     Returns
