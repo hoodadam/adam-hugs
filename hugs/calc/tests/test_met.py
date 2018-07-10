@@ -44,3 +44,13 @@ def test_components():
     expected = [-8.66, -5.00]
 
     assert_array_almost_equal(expected, components, 3)
+
+
+def test_components_array_like():
+    """Test calculating wind components with np arrays."""
+    speed = np.array([4, 8])
+    wdir = np.array([0, 180])
+
+    (x_components, y_components) = get_wind_components(speed, wdir)
+    assert_array_almost_equal([0, 0], x_components, 4)
+    assert_array_almost_equal([-4, 8], y_components, 4)
