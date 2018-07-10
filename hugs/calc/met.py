@@ -9,6 +9,7 @@ These include:
 from __future__ import division
 
 import warnings
+
 import numpy as np
 
 
@@ -70,8 +71,8 @@ def get_wind_components(speed, wdir):
     speed : array_like
         The wind speed (magnitude)
     wdir : array_like
-        The wind direction, in degrees, specified as the direction from which the wind is
-        blowing, with 0 being North.
+        The wind direction, in degrees, specified as the direction from which
+        the wind is blowing, with 0 being North.
 
     Returns
     -------
