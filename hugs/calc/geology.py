@@ -12,7 +12,7 @@ import numpy as np
 
 
 def snell_angle(incoming_angle, velocity_top, velocity_bottom):
-    r"""Calculate refration in the lower layer of Snell's law.
+    r"""Calculate refraction in the lower layer of Snell's law.
 
     Parameters
     ----------
