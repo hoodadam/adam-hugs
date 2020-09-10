@@ -7,15 +7,15 @@ except ImportError:
 
 config = {
     'description': 'hugs',
-    'author': 'John R. Leeman',
-    'url': 'Project URL https://github.com/jrleeman/SettingUpOpenSource',
-    'download_url': 'https://github.com/jrleeman/SettingUpOpenSource',
+    'author': 'Adam Hood',
+    'url': 'Project URL https://github.com/hoodadam/adam-hugs',
+    'download_url': 'https://github.com/hoodadam/adam-hugs',
     'author_email': 'kd5wxb@gmail.com',
-    'version': '0.1',
+    'version': '0.1.1',
     'install_requires': ['numpy', 'matplotlib'],
     'packages': ['hugs', 'hugs.calc', 'hugs.plots'],
     'scripts': [],
-    'name': 'hugs'
+    'name': 'adam-hugs'
 }
 
 setup(**config)
